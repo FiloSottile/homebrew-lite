@@ -18,6 +18,11 @@ class Graphviz < Formula
     sha256 x86_64_linux:   "7e44572dcffd7f2538725ad2efb4743777d17e4eb44a58110d5fb9cf6af41da1"
   end
 
+  pour_bottle? do
+    reason "This is a patched formula to remove dependencies."
+    satisfy { false }
+  end
+
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "bison" => :build

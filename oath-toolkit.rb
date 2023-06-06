@@ -24,6 +24,11 @@ class OathToolkit < Formula
     sha256               x86_64_linux:   "3ea5398bb38297c062a54cce0ee803487211cf9f16c7697981d67a3edebd94e6"
   end
 
+  pour_bottle? do
+    reason "This is a patched formula to remove dependencies."
+    satisfy { false }
+  end
+
   depends_on "pkg-config" => :build
 
   def install
