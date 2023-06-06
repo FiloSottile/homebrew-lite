@@ -1,0 +1,10 @@
+--- /Users/filippo/Downloads/oath-toolkit.rb	2023-06-06 13:08:53
++++ oath-toolkit.rb	2023-06-06 13:09:19
+@@ -25,7 +25,6 @@
+   end
+ 
+   depends_on "pkg-config" => :build
+-  depends_on "libxmlsec1"
+ 
+   def install
+     system "./configure", "--disable-dependency-tracking", "--prefix=#{prefix}"

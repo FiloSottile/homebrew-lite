@@ -1,0 +1,27 @@
+--- /opt/homebrew/Library/Taps/homebrew/homebrew-core/Formula/graphviz.rb	2023-06-06 12:58:29
++++ graphviz.rb	2023-06-06 13:09:23
+@@ -22,12 +22,7 @@
+   depends_on "automake" => :build
+   depends_on "bison" => :build
+   depends_on "pkg-config" => :build
+-  depends_on "gd"
+-  depends_on "gts"
+-  depends_on "libpng"
+-  depends_on "librsvg"
+   depends_on "libtool"
+-  depends_on "pango"
+ 
+   uses_from_macos "flex" => :build
+   uses_from_macos "python" => :build
+@@ -51,9 +46,8 @@
+       --without-poppler
+       --without-qt
+       --without-x
+-      --with-freetype2
+-      --with-gdk-pixbuf
+-      --with-gts
++      --without-freetype2
++      --without-gdk-pixbuf
+     ]
+ 
+     system "./autogen.sh"
